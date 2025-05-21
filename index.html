@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Payroll Application</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Employee Detail form -->
+    <div class="employee-detail-form">
+      <form id="detail-form">
+        <h2>Employee Payroll Form</h2>
+        <label for="empId">Employee ID</label> <br />
+        <input type="number" id="empId" name="employeeId" />
+        <br />
+        <br />
+        <label for="name">Name</label><br />
+        <input type="text" id="name" name="employeeName" />
+        <br />
+        <br />
+        <label for="email">Email</label><br />
+        <input type="email" id="email" name="employeeEmail" />
+        <br />
+        <br />
+        <label for="department">Department</label><br />
+        <select id="department" name="employeeDept">
+          <option value="" hidden></option>
+          <option value="Information Technology">Information Technology</option>
+          <option value="Human Resources">Human Resources</option>
+          <option value="Accounting">Accounting</option>
+          <option value="Sales">Sales</option>
+          <option value="Customer Care">Customer Care</option>
+        </select>
+        <br />
+        <br />
+        <label for="salary">Salary</label><br />
+        <input id="salary" type="number" name="salaryOfEmployee" />
+        <br />
+        <br />
+        <input type="reset" />
+        <input type="submit" />
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
