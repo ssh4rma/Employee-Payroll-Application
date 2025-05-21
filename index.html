@@ -38,9 +38,53 @@
         <input id="salary" type="number" name="salaryOfEmployee" />
         <br />
         <br />
+        <label for="start-date">Start Date</label><br />
+        <input id="start-date" type="date" name="joiningDateOfEmp" />
+        <br />
+        <br />
         <input type="reset" />
         <input type="submit" />
       </form>
+    </div>
+
+    <!-- Table where the entries will get added in the table-->
+    <div class="entries-table">
+      <div class="table-header">
+        <h2>Employee Payroll</h2>
+        <button>Add Employee</button>
+      </div>
+
+      <div class="table-stats">
+        <div id="total-emp">
+          <h5>Employees</h5>
+          <h3>0</h3>
+        </div>
+        <div id="total-salary">
+          <h5>Total Salary</h5>
+          <h3>$0</h3>
+        </div>
+        <div id="average-salary">
+          <h5>Average Salary</h5>
+          <h3>$0</h3>
+        </div>
+        <div id="highest-salary">
+          <h5>Highest Salary</h5>
+          <h3>$0</h3>
+        </div>
+      </div>
+
+      <div class="search-and-sort">
+        <input id="search-bar" type="search" placeholder="Search" />
+        <button id="sort-button">Sort the Salaries</button>
+      </div>
+
+      <table>
+        <th>Name</th>
+        <th>Department</th>
+        <th>Salary</th>
+        <th>Start Date</th>
+        <th>Actions</th>
+      </table>
     </div>
 
     <script src="script.js"></script>
