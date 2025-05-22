@@ -1,0 +1,22 @@
+{
+  "employees": [
+    {
+      "id": "3d91",
+      "employeeId": "1",
+      "employeeName": "John",
+      "employeeEmail": "john@gmail.com",
+      "employeeDept": "Information Technology",
+      "salaryOfEmployee": "10000",
+      "joiningDateOfEmp": "2025-05-15"
+    },
+    {
+      "id": "362d",
+      "employeeId": "2",
+      "employeeName": "Alice",
+      "employeeEmail": "alice@gmail.com",
+      "employeeDept": "Human Resources",
+      "salaryOfEmployee": "20000",
+      "joiningDateOfEmp": "2025-05-20"
+    }
+  ]
+}

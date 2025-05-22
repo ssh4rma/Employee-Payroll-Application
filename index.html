@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Employee Payroll Application</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
   </head>
   <body>
     <!-- Employee Detail form -->
     <div class="employee-detail-form">
-      <form id="detail-form">
+      <form id="details-form">
         <h2>Employee Payroll Form</h2>
         <label for="empId">Employee ID</label> <br />
         <input type="number" id="empId" name="employeeId" />
@@ -43,48 +47,64 @@
         <br />
         <br />
         <input type="reset" />
-        <input type="submit" />
+        <input id="form-submit-button" type="submit" />
       </form>
     </div>
 
     <!-- Table where the entries will get added in the table-->
-    <div class="entries-table">
-      <div class="table-header">
-        <h2>Employee Payroll</h2>
-        <button>Add Employee</button>
-      </div>
+    <div class="main">
+      <div class="entries-table">
+        <div class="table-header">
+          <h2>Employee Payroll</h2>
+          <button id="add-emp-btn">Add Employee</button>
+        </div>
 
-      <div class="table-stats">
-        <div id="total-emp">
-          <h5>Employees</h5>
-          <h3>0</h3>
+        <div class="table-stats">
+          <div id="total-emp">
+            <h5>Employees</h5>
+            <h3>0</h3>
+          </div>
+          <div id="total-salary">
+            <h5>Total Salary</h5>
+            <h3>₹0</h3>
+          </div>
+          <div id="average-salary">
+            <h5>Average Salary</h5>
+            <h3>₹0</h3>
+          </div>
+          <div id="highest-salary">
+            <h5>Highest Salary</h5>
+            <h3>₹0</h3>
+          </div>
         </div>
-        <div id="total-salary">
-          <h5>Total Salary</h5>
-          <h3>$0</h3>
-        </div>
-        <div id="average-salary">
-          <h5>Average Salary</h5>
-          <h3>$0</h3>
-        </div>
-        <div id="highest-salary">
-          <h5>Highest Salary</h5>
-          <h3>$0</h3>
-        </div>
-      </div>
 
-      <div class="search-and-sort">
-        <input id="search-bar" type="search" placeholder="Search" />
-        <button id="sort-button">Sort the Salaries</button>
-      </div>
+        <br />
+        <br />
 
-      <table>
-        <th>Name</th>
-        <th>Department</th>
-        <th>Salary</th>
-        <th>Start Date</th>
-        <th>Actions</th>
-      </table>
+        <div class="search-and-sort">
+          <input id="search-input" type="search" placeholder="Search EmpID" />
+          <button id="search-button"><i class="fas fa-search"></i></button>
+          <br />
+          <button id="sort-button">Sort by EmpID</button>
+        </div>
+        <br />
+        <br />
+
+        <table id="emp-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Dept</th>
+              <th>Salary</th>
+              <th>Joining Date</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
     </div>
 
     <script src="script.js"></script>
