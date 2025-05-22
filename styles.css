@@ -9,7 +9,6 @@
   padding: 0px;
   background-color: #f5f5f5;
   visibility: hidden;
-  /* position absolute becasue it was occupying the space when I set the visibilty to hidden */
   position: absolute;
 }
 

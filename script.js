@@ -126,6 +126,8 @@ function renderEmp() {
       );
     });
   });
+
+  updateStats();
 }
 
 document.addEventListener("DOMContentLoaded", renderEmp);
@@ -232,3 +234,29 @@ document.querySelector("#emp-table tbody").addEventListener("click", (e) => {
       });
   }
 });
+
+//application stats
+async function updateStats() {
+  const employees = await getAllEmp();
+
+  const totalEmp = employees.length;
+  let totalSalary = 0;
+  let highestSalary = 0;
+
+  employees.forEach((emp) => {
+    const sal = Number(emp.salaryOfEmployee);
+    totalSalary += sal;
+    if (sal > highestSalary) highestSalary = sal;
+  });
+
+  const averageSalary = totalEmp ? (totalSalary / totalEmp).toFixed(2) : 0;
+
+  document.querySelector("#total-emp h3").textContent = totalEmp;
+  document.querySelector("#total-salary h3").textContent = `₹${totalSalary}`;
+  document.querySelector(
+    "#average-salary h3"
+  ).textContent = `₹${averageSalary}`;
+  document.querySelector(
+    "#highest-salary h3"
+  ).textContent = `₹${highestSalary}`;
+}
