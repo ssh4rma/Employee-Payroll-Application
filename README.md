@@ -23,3 +23,6 @@ A simple **Employee Management System** built with **HTML**, **CSS**, and **Vani
 ### Run the JSON server
 - `json-server --watch db.json --port 3000`
 
+### Application Snapshot
+![image](https://github.com/user-attachments/assets/f21a381e-3c57-4594-9e03-53a465a5a06f)
+![image](https://github.com/user-attachments/assets/8d800512-0cfa-4674-89a6-2667815da360)
